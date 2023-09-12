@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Tool</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Project Management Tool</h1>
+    </header>
+    <main>
+        <section class="task-management">
+            <div class="container">
+                <div class="task-sidebar">
+                    <h2>Task Filters</h2>
+                    <button class="filter-button active" data-filter="all">All Tasks</button>
+                    <button class="filter-button" data-filter="myTasks">My Tasks</button>
+                    <button class="filter-button" data-filter="assignedTasks">Assigned Tasks</button>
+                    <button class="filter-button" data-filter="completedTasks">Completed Tasks</button>
+                </div>
+                <div class="task-content">
+                    <div class="create-task">
+                        <h2>Create Task</h2>
+                        <form id="createTaskForm" method="post">
+                            <label for="taskName">Task Name:</label>
+                            <input type="text" id="taskName" name="taskName" required>
+                            <label for="assignedTo">Assign To:</label>
+                            <select id="assignedTo" name="assignedTo" required>
+                                <option value="Pratiksha">Pratiksha</option>
+                                <option value="Govindraj">Govindraj</option>
+                                <option value="Rishab">Rishab</option>
+                                <option value="Gayatri">Gayatri</option>
+                                <option value="Sonali">Sonali</option>
+                            </select>
+                            <label for="dueDate">Due Date:</label>
+                            <input type="date" name="dueDate" id="dueDate" required>
+                            <label for="description">Description:</label>
+                            <textarea name="description" id="description" required></textarea>
+                            <button type="submit" id="createTaskButton">Create Task</button>
+                        </form>
+                    </div>
+                    <div class="task-list">
+                        <h2>Task List</h2>
+                        <ul id="taskList">
+                            <!-- Task items will be added here dynamically -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="chat-section">
+            <h2>Chat</h2>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Chat messages will be displayed here dynamically -->
+                </div>
+                <div class="chat-input">
+                    <select id="writerName">
+                        <option value="Pratiksha">Pratiksha</option>
+                        <option value="Govindraj">Govindraj</option>
+                        <option value="Rishab">Rishab</option>
+                        <option value="Gayatri">Gayatri</option>
+                        <option value="Sonali">Sonali</option>
+                    </select>
+                    <input type="text" id="chatMessage" placeholder="Type your message...">
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
